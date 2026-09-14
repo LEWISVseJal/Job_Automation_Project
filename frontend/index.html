@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Job Automation</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================================================
+         APP CONTAINER
+    ========================================================== -->
+
+    <div class="app">
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    JA
+                </div>
+
+                <div>
+                    <h1>Job Automation</h1>
+                    <span>AI Job Assistant</span>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="navigation">
+
+                <p class="nav-label">
+                    MAIN
+                </p>
+
+                <button
+                    class="nav-item active"
+                    data-page="dashboard"
+                >
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="profile"
+                >
+                    <span class="nav-icon">◉</span>
+                    <span>Profile</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="resume"
+                >
+                    <span class="nav-icon">▤</span>
+                    <span>Resume</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="jobs"
+                >
+                    <span class="nav-icon">⌕</span>
+                    <span>Jobs</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="matches"
+                >
+                    <span class="nav-icon">★</span>
+                    <span>Matches</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="applications"
+                >
+                    <span class="nav-icon">✓</span>
+                    <span>Applications</span>
+                </button>
+
+
+                <p class="nav-label settings-label">
+                    SYSTEM
+                </p>
+
+
+                <button
+                    class="nav-item"
+                    data-page="settings"
+                >
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </button>
+
+            </nav>
+
+
+            <!-- Sidebar footer -->
+
+            <div class="sidebar-footer">
+
+                <div class="linkedin-status">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <small>Session ready</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+
+        <main class="main-content">
+
+            <!-- Top bar -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="breadcrumb">
+                        Job Automation
+                    </p>
+
+                    <h2 id="page-title">
+                        Dashboard
+                    </h2>
+
+                </div>
+
+
+                <div class="topbar-actions">
+
+                    <div class="system-status">
+
+                        <span class="status-dot"></span>
+
+                        <span>
+                            System Ready
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="icon-button"
+                        title="Notifications"
+                    >
+                        ♢
+                    </button>
+
+
+                    <div class="user-avatar">
+                        SL
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+            ================================================== -->
+
+            <section class="content">
+
+
+                <!-- =================================================
+                     DASHBOARD
+                ================================================== -->
+
+                <div
+                    class="page active"
+                    id="page-dashboard"
+                >
+
+                    <div class="welcome-section">
+
+                        <div>
+
+                            <h3>
+                                Welcome back 👋
+                            </h3>
+
+                            <p>
+                                Manage your job search and applications
+                                from one place.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="primary-button"
+                            onclick="navigateTo('jobs')"
+                        >
+                            <span>⌕</span>
+                            Find Jobs
+                        </button>
+
+                    </div>
+
+
+                    <!-- Statistics -->
+
+                    <div class="stats-grid">
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon jobs-icon">
+                                ⌕
+                            </div>
+
+                            <div>
+
+                                <span class="stat-label">
+                                    Jobs Collected
+                                </span>
+
+                                <strong
+                                    class="stat-value"
+                                    id="jobs-count"
+                                >
+                                    0
+                                </strong>
+
+                                <small>
+                                    From LinkedIn
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon match-icon">
+                                ★
+                            </div>
+
+                            <div>
+
+                                <span class="stat-label">
+                                    Matched Jobs
+                                </span>
+
+                                <strong
+                                    class="stat-value"
+                                    id="matches-count"
+                                >
+                                    0
+                                </strong>
+
+                                <small>
+                                    Based on your profile
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon apply-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <span class="stat-label">
+                                    Applications
+                                </span>
+
+                                <strong
+                                    class="stat-value"
+                                    id="applications-count"
+                                >
+                                    0
+                                </strong>
+
+                                <small>
+                                    Application history
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon easy-icon">
+                                ⚡
+                            </div>
+
+                            <div>
+
+                                <span class="stat-label">
+                                    Easy Apply
+                                </span>
+
+                                <strong
+                                    class="stat-value"
+                                >
+                                    Ready
+                                </strong>
+
+                                <small>
+                                    Automation enabled
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Two-column dashboard -->
+
+                    <div class="dashboard-grid">
+
+
+                        <!-- Automation -->
+
+                        <div class="panel">
+
+                            <div class="panel-header">
+
+                                <div>
+
+                                    <h3>
+                                        Automation
+                                    </h3>
+
+                                    <p>
+                                        Control your job application workflow.
+                                    </p>
+
+                                </div>
+
+                                <span class="ready-badge">
+                                    READY
+                                </span>
+
+                            </div>
+
+
+                            <div class="automation-status">
+
+                                <div class="automation-step completed">
+
+                                    <div class="step-circle">
+                                        ✓
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            LinkedIn Session
+                                        </strong>
+
+                                        <span>
+                                            Connected
+                                        </span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="automation-line"></div>
+
+
+                                <div class="automation-step">
+
+                                    <div class="step-circle">
+                                        2
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            Find & Match Jobs
+                                        </strong>
+
+                                        <span>
+                                            Ready to start
+                                        </span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="automation-line"></div>
+
+
+                                <div class="automation-step">
+
+                                    <div class="step-circle">
+                                        3
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            Easy Apply
+                                        </strong>
+
+                                        <span>
+                                            Safe application mode
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="primary-button full-width"
+                                onclick="navigateTo('jobs')"
+                            >
+                                Start Job Search
+                            </button>
+
+                        </div>
+
+
+                        <!-- Safety -->
+
+                        <div class="panel">
+
+                            <div class="panel-header">
+
+                                <div>
+
+                                    <h3>
+                                        Safety Controls
+                                    </h3>
+
+                                    <p>
+                                        Automation boundaries.
+                                    </p>
+
+                                </div>
+
+                                <span class="shield-icon">
+                                    ♢
+                                </span>
+
+                            </div>
+
+
+                            <div class="safety-list">
+
+                                <div class="safety-item">
+
+                                    <span class="check">
+                                        ✓
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Easy Apply enabled
+                                        </strong>
+
+                                        <small>
+                                            LinkedIn Easy Apply only
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="safety-item">
+
+                                    <span class="check">
+                                        ✓
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            External applications blocked
+                                        </strong>
+
+                                        <small>
+                                            External websites are not automated
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="safety-item">
+
+                                    <span class="lock">
+                                        🔒
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Final submission blocked
+                                        </strong>
+
+                                        <small>
+                                            You review before submitting
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Recent activity -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Recent Activity
+                                </h3>
+
+                                <p>
+                                    Your latest job automation activity.
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="text-button"
+                                onclick="navigateTo('applications')"
+                            >
+                                View all →
+                            </button>
+
+                        </div>
+
+
+                        <div class="empty-state">
+
+                            <div class="empty-icon">
+                                ◌
+                            </div>
+
+                            <h4>
+                                No activity yet
+                            </h4>
+
+                            <p>
+                                Start searching for jobs to see your
+                                activity here.
+                            </p>
+
+                            <button
+                                class="secondary-button"
+                                onclick="navigateTo('jobs')"
+                            >
+                                Find Jobs
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PROFILE
+                ================================================== -->
+
+                <div
+                    class="page"
+                    id="page-profile"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h3>Candidate Profile</h3>
+                            <p>
+                                Manage the information used for job matching.
+                            </p>
+                        </div>
+
+                        <button class="primary-button">
+                            Save Profile
+                        </button>
+
+                    </div>
+
+
+                    <div class="form-panel">
+
+                        <h4>Contact Information</h4>
+
+                        <div class="form-grid">
+
+                            <label>
+                                Full Name
+                                <input
+                                    type="text"
+                                    placeholder="Your full name"
+                                >
+                            </label>
+
+                            <label>
+                                Email
+                                <input
+                                    type="email"
+                                    placeholder="your@email.com"
+                                >
+                            </label>
+
+                            <label>
+                                Phone
+                                <input
+                                    type="text"
+                                    placeholder="Phone number"
+                                >
+                            </label>
+
+                            <label>
+                                LinkedIn
+                                <input
+                                    type="url"
+                                    placeholder="LinkedIn profile URL"
+                                >
+                            </label>
+
+                            <label>
+                                GitHub
+                                <input
+                                    type="url"
+                                    placeholder="GitHub profile URL"
+                                >
+                            </label>
+
+                            <label>
+                                Portfolio
+                                <input
+                                    type="url"
+                                    placeholder="Portfolio URL"
+                                >
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-panel">
+
+                        <h4>Professional Profile</h4>
+
+                        <div class="form-grid">
+
+                            <label>
+                                Headline
+                                <input
+                                    type="text"
+                                    placeholder="AI / ML Engineer"
+                                >
+                            </label>
+
+                            <label>
+                                Candidate Type
+                                <select>
+                                    <option>Fresher</option>
+                                    <option>Student</option>
+                                    <option>Experienced</option>
+                                </select>
+                            </label>
+
+                            <label class="full-field">
+                                Professional Summary
+
+                                <textarea
+                                    placeholder="Brief professional summary"
+                                ></textarea>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-panel">
+
+                        <h4>Job Preferences</h4>
+
+                        <div class="form-grid">
+
+                            <label class="full-field">
+                                Target Roles
+
+                                <input
+                                    type="text"
+                                    placeholder="AI Engineer, ML Engineer, Data Scientist"
+                                >
+
+                            </label>
+
+                            <label>
+                                Preferred Locations
+
+                                <input
+                                    type="text"
+                                    placeholder="Mumbai, Remote"
+                                >
+
+                            </label>
+
+                            <label>
+                                Minimum Match Score
+
+                                <input
+                                    type="number"
+                                    value="60"
+                                    min="0"
+                                    max="100"
+                                >
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RESUME
+                ================================================== -->
+
+                <div
+                    class="page"
+                    id="page-resume"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h3>Resume</h3>
+                            <p>
+                                Upload and manage your structured resume.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="resume-upload">
+
+                        <div class="upload-icon">
+                            ↑
+                        </div>
+
+                        <h3>
+                            Upload your resume
+                        </h3>
+
+                        <p>
+                            PDF resume will be parsed automatically.
+                        </p>
+
+                        <button class="primary-button">
+                            Choose Resume
+                        </button>
+
+                    </div>
+
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <h3>Resume Information</h3>
+                                <p>
+                                    Parsed resume information will appear here.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="empty-state">
+
+                            <div class="empty-icon">
+                                📄
+                            </div>
+
+                            <h4>
+                                Resume not uploaded
+                            </h4>
+
+                            <p>
+                                Upload your resume to start the parsing process.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     JOBS
+                ================================================== -->
+
+                <div
+                    class="page"
+                    id="page-jobs"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h3>Jobs</h3>
+                            <p>
+                                Search and collect LinkedIn jobs.
+                            </p>
+                        </div>
+
+                        <button class="primary-button">
+                            Search LinkedIn
+                        </button>
+
+                    </div>
+
+
+                    <div class="search-panel">
+
+                        <div class="search-box">
+                            <span>⌕</span>
+
+                            <input
+                                type="text"
+                                placeholder="Search job title, skill or company..."
+                            >
+                        </div>
+
+                        <select>
+                            <option>All Locations</option>
+                            <option>Remote</option>
+                            <option>Mumbai</option>
+                        </select>
+
+                        <select>
+                            <option>All Job Types</option>
+                            <option>Full-time</option>
+                            <option>Internship</option>
+                            <option>Contract</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="empty-state large-empty">
+
+                        <div class="empty-icon">
+                            ⌕
+                        </div>
+
+                        <h4>
+                            No jobs collected yet
+                        </h4>
+
+                        <p>
+                            Start a LinkedIn job search to collect jobs.
+                        </p>
+
+                        <button class="primary-button">
+                            Search Jobs
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     MATCHES
+                ================================================== -->
+
+                <div
+                    class="page"
+                    id="page-matches"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h3>Job Matches</h3>
+                            <p>
+                                Jobs ranked according to your profile.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="empty-state large-empty">
+
+                        <div class="empty-icon">
+                            ★
+                        </div>
+
+                        <h4>
+                            No matches yet
+                        </h4>
+
+                        <p>
+                            Your matched jobs will appear here after
+                            the matching engine runs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     APPLICATIONS
+                ================================================== -->
+
+                <div
+                    class="page"
+                    id="page-applications"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h3>Applications</h3>
+                            <p>
+                                Track your application progress.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="application-tabs">
+
+                        <button class="tab active">
+                            All
+                        </button>
+
+                        <button class="tab">
+                            In Progress
+                        </button>
+
+                        <button class="tab">
+                            Review Required
+                        </button>
+
+                        <button class="tab">
+                            Completed
+                        </button>
+
+                    </div>
+
+
+                    <div class="empty-state large-empty">
+
+                        <div class="empty-icon">
+                            ✓
+                        </div>
+
+                        <h4>
+                            No applications yet
+                        </h4>
+
+                        <p>
+                            Applications created through the automation
+                            workflow will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SETTINGS
+                ================================================== -->
+
+                <div
+                    class="page"
+                    id="page-settings"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h3>Settings</h3>
+                            <p>
+                                Configure job automation behaviour.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-panel">
+
+                        <div class="setting-row">
+
+                            <div>
+                                <strong>
+                                    Easy Apply
+                                </strong>
+
+                                <p>
+                                    Enable LinkedIn Easy Apply automation.
+                                </p>
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div>
+                                <strong>
+                                    Resume Upload
+                                </strong>
+
+                                <p>
+                                    Automatically upload the selected resume.
+                                </p>
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div>
+                                <strong>
+                                    External Application Automation
+                                </strong>
+
+                                <p>
+                                    Keep external websites outside automation.
+                                </p>
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div>
+                                <strong>
+                                    Stop Before Final Submit
+                                </strong>
+
+                                <p>
+                                    Always stop before the final application submission.
+                                </p>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                    disabled
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
