@@ -16,7 +16,7 @@
         "source": "linkedin",
         "collected_at": "2026-09-14T18:19:18.321487",
         "description": "",
-        "details_extracted_at": "2026-09-14T18:24:33.820614"
+        "details_extracted_at": "2026-09-24T09:15:47.059901"
     },
     {
         "id": "4457461702",
@@ -35,7 +35,7 @@
         "source": "linkedin",
         "collected_at": "2026-09-14T18:19:18.478419",
         "description": "",
-        "details_extracted_at": "2026-09-14T18:24:52.070384"
+        "details_extracted_at": "2026-09-24T09:16:07.543935"
     },
     {
         "id": "4448336708",
@@ -49,12 +49,12 @@
         "requirements": [],
         "employment_type": "",
         "experience_level": "",
-        "apply_type": "UNKNOWN",
-        "easy_apply": false,
+        "apply_type": "EASY_APPLY",
+        "easy_apply": true,
         "source": "linkedin",
         "collected_at": "2026-09-14T18:19:18.702975",
         "description": "",
-        "details_extracted_at": "2026-09-14T18:25:10.923788"
+        "details_extracted_at": "2026-09-24T09:16:34.097938"
     },
     {
         "id": "4464422989",
@@ -73,7 +73,7 @@
         "source": "linkedin",
         "collected_at": "2026-09-14T18:19:18.843661",
         "description": "",
-        "details_extracted_at": "2026-09-14T18:25:29.518643"
+        "details_extracted_at": "2026-09-24T09:17:02.110704"
     },
     {
         "id": "4461819712",
@@ -92,6 +92,6 @@
         "source": "linkedin",
         "collected_at": "2026-09-14T18:19:18.964930",
         "description": "",
-        "details_extracted_at": "2026-09-14T18:25:48.033818"
+        "details_extracted_at": "2026-09-24T09:17:37.458958"
     }
 ]
